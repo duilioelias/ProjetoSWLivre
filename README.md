@@ -12,7 +12,8 @@ Decidimos que cada membro do projeto iria pesquisar três bugs ou features para 
 três entre as nove.
 
 ##Audacity:
-Quem é o Audacity...
+O Audacity é um software gratuito que permite editar e gravar aúdios nos principais SOs. Há diversos recursos úteis, com o Audacity podemos: editar arquivos em MP3, Ogg entre outros, é possível captar aúdio através de qualquer computador com microfone, além de adicionar diversos efeitos de som o que torna a ferramenta ideal para gravação de podcasts.
+O Audacity é distribuído sob a licença GNU GPL (Licença pública geral), seus desenvolvedores permitem o uso livre do programa para estudo, melhorá-la ou compartilhá-lo.
 
 ##Features ou bugs escolhidos:
 	
