@@ -23,6 +23,8 @@ O Audacity é distribuído sob a licença GNU GPL (Licença pública geral), seu
 
 	*Maurício Ozaki:
 
+* Eu entrei em contato com o Bugzilla para poder receber um login e senha, porém a pessoa me respondeu dizendo que o blog é apenas para desenvolvedores experientes em C++. Vou tentar um novo contato para informar o real interesse!
+
 <!-- Se possível galera já coloca algumas idéias para soluções -->
 
 ##Planejamento de Trabalho:
