@@ -7,11 +7,21 @@ Pesquisar sobre o NodeJS e Grunt, não pude ainda fazer uma busca profunda, mas 
 ##Resumo
 
 	Requisitos de Software ou Requisitos do Sistema, de maneira prática, significa aquilo que o programa deve fazer, isto é, o que ele deve devolver quando solicitado e suas restrições.
-	Muitas vezes é necessário fazer  um separação no termo Requisitos de sistema, dividindo-o em Requisitos do Usuário e Requisitos do Sistema:
+	Muitas vezes é necessário fazer uma separação no termo Requisitos de sistema, dividindo-o em Requisitos do Usuário e Requisitos do Sistema:
 	- Requisito de Usuário: escrever em linguagem “natural” aquilo que é esperado que o programa faça, é ideal também colocar as restrições em que funcionará. Se possível, criar diagramas.
 	- Requisito de Sistema: são descrições mais detalhadas do sistema, suas funções e restrições. Segundo Sommerville, a documentação deve conter exatamente o que deve ser implementado e deve fazer parte do contrato entre o comprador e os desenvolvedores.
 	É importante separar o nível de detalhes nos requisitos, pois diferentes tipos de leitores precisam entender a descrição do programa. Os requisitos de usuário são úteis para quem não precisa entender como o programa funciona ou como será implementado; já os requisitos de sistema, são úteis para quem desenvolverá o sistema.
 
+	Classificação dos Requisitos de Software:
+	- Requisitos Funcionais: são informações sobre o que o programa deve fazer e quais são suas entradas e saídas e também as restrições de maneira detalhada.
+  	Erros nesta parte do são comuns, porque é comum algumas descrições de requisitos não sejam precisas e causem erros na hora de implementar. Com estes erros, mais requisitos são acrescentados causando atrasos e aumentando os custos.
+	O ideal é que os requisitos sejam completos e consistentes, isto é, sem ambiguidades. Em grandes sistemas é praticamente impossível de consegui e também há muitos stakeholder (pessoas afetadas pelo sistema).
+	- Requisitos Não-Funcionais: são os requisitos que não estão diretamente ligados com o que o usuário espera de saída, por exemplo: tempo de resposta do sistema, linguagem em que será programado ou segurança.
+	Muitas vezes são mais importantes que os Requisitos funcionais, pois a sua falha causa a inutilidade de todo o sistema.
+
+	**Colocar um exemplo prático de uso**
+
+##Exemplos de Ferramentas
 
 ##Bibliografia
 
