@@ -1,0 +1,19 @@
+A análise de requesito é o primeiro passo técnico do processo de engenharia
+de software. É nesse ponto que uma declaração geral do escopo do software é aprimorada em uma especificação concreta que se torna a base para todas as 
+atividades de engenharia de software que se seguirão.
+
+A análise deve concentrar-se nos domínios funcionais, comportamentais e de 
+informação de um problema. Para entender melhor o que é exigido, modelos são criados, o problema é dividido em parrições e são desenvolvidas representações que descrevem a essência dos requesitos e, posteriormente, os detalhes
+de implementação.
+
+Em muitos casos, não é possível especificar completamente um problema em uma
+primeira etapa. A prototipação oferece uma abordagem alternativa que resultaem um modelo executável do software, a partir do qual as exigências podem
+ser refinidas. Para conduzir adequadamente a prototipação, ferramentas e técnicas especiais são exigidas. 
+
+Em suma, a especificação de requisitos de software é desenvolvida como uma 
+consequência da análise. A revisão é fundamental para garantir que o desenvolvimento e o cliente tenham a mesma percepção do sistema. Infelizmente, mesmo com o melhor dos métodos, "a complicação" é que o "problema" contimua mudando.
+
+Referências
+
+[ARN87] Arnold, S.P e S.L Stepoway, "The Reuse System: Cataloging and Retrieval of Reusable Software" Proceeding of COMPCON'87, IEEE, 1987,pp. 376-379.
+
