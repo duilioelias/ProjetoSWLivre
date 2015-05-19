@@ -1,0 +1,127 @@
+# É possível que a formatação fique ruim pois eu fiz no editor de texto e tem imagens, mas essa parte irá para os slides
+
+1. Introdução
+	A Rede de Bayes é um método de modelagem e decisão baseado em incertezas, através do Teorema de Bayes. Aplicado em áreas diversas como setor financeiro e médico, a rede bayesiana é uma ferramenta importante em Inteligência Artificial para ajudar o agente inteligente a tomar melhor decisão racional com as poucas informações coletada do ambiente. Antes de iniciar a explicação sobre o tema, será apresentado alguns conceitos básicos de probabilidade que serão importantes para entender a rede bayesiana. Será tratado também sobre o aprendizado bayesiano.
+
+2. Noções de Probabilidades
+	Em probabilidade, o conjunto de todas as possibilidades possíveis é chamado de espaço amostral e representado pela letra grega Ω, por exemplo, quando jogamos um dado, o espaço amostral é dado por: 
+	Ω={1,2,3,4,5,6}
+	Dentro do espaço amostral, chamamos de evento um elemento do conjunto tal que:
+	0≤P(ω)≤1, e para o espaço amostral temos ∑_ωϵΩ▒〖P(ω)=1〗, isto é, a soma de todas as probabilidades dentro do universo do espaço amostral é um. Este fato nos permite concluir uma importante relação, chamada de probabilidade complementar, dada por:
+	P(ω)  = 1-P(ω^c)
+Outra importante relação é chamado de princípio da inclusão e exclusão:
+	P(a∪b)= P(a)+ P(b)- P(a∩b).
+	Em alguns casos, queremos saber a probabilidade de um evento ocorrer, dado que outro evento já ocorreu, por exemplo, se temos uma urna com 3 bolas vermelhas e 3 brancas, e tiramos uma bola vermelha, queremos saber a possibilidade de que a segunda bola tirada seja também vermelha. Em linguagem matemática, temos:
+P(2ª bola vermelha┤|1ª bola é vermelha)= (P(2ª bola vermelha ∩ 1 ª bola é vermelha))/(P( 1 ª bola é vermelha))	
+Esta é a chamada probabilidade condicional, podemos chamar o “|” de “dado que” e de maneira mais genérica, a fórmula fica:
+P(a│b)= (P(a∩b))/(P(b))	(2.1)
+Podemos ler como: “Qual a probabilidade de ocorrer o evento a dado que já ocorreu o evento b?”
+
+3. Regra de Bayes
+	Inferência bayesiana é um método para “prever” o comportamento de populações através de dados coletados em pesquisa e conhecimentos prévios do universo observado. Para obter a Lei de Bayes, vamos utilizar a equação (1):
+P(a│b)= (P(a∩b))/(P(b)) => P(a∩b)=P(a│b)P(b)
+P(b│a)= (P(a∩b))/(P(a)) => P(a∩b)=P(b│a)P(a)
+P(a│b)P(b)=P(b│a)P(a)
+P(b│a)=(P(a│b)P(b))/(P(a))	(3.1) Lei de Bayes ou Teorema de Bayes
+	Em caso de eventos independentes, temos:
+P(X|Y)=P(X) ou P(Y|X)=P(Y) ou P(X,Y)=P(X)P(Y)
+	Quando no problema são considerados que todas as variáveis são independentes, a fórmula geral, conhecida por naive Bayes, fica:
+P(Causa, Efeito1,  ... , EfeitoN) = P(Causa)∏▒〖P(Efeito1|Cause)〗 (3.2)
+
+
+4. Redes Bayesianas
+	A rede bayesiana é uma combinação de Teoria dos Grafos com Teoria da probabilidade, trata-se de um grafo acíclico e direcionado onde cada nó representa uma variável aleatória discreta ou aleatória. As arestas ligam as variáveis dependentes e por outro lado, se não há arestas entre algum nós, eles são independentes entre si. Cada nó deve conter uma tabela de probabilidades condicionais (TPC) que mostram a influência dos nós pais nos nós filhos. Abaixo um exemplo de grafo para um sistema de alarme residencial:
+ 
+Figura 1 – Exemplo de Grafo de Rede Bayesiana
+	As probabilidades em cada nó podem ser representadas por P(X_i│Pai(X_i ) ), onde Pai(X_i ) quer dizer o nó pai de X_i.
+	Para melhorar o desempenho da rede é utilizada a linguagem proposicional porque é uma maneira de deixar a linguagem mais próxima da humana, diminuir o risco de ambiguidades e computacionalmente é mais fácil de trabalhar.
+	“Se uma rede bayesiana satisfaz a condição de Markov, então sua distribuição de probabilidade conjunta é igual ao produto das probabilidades condicionais de todos os nós dado os valores de seus pais”. [14]
+	Para grafos de redes bayesianas a distribuição de probabilidade conjunta é dada por:
+P(X_1 〖,…,X〗_n )= ∏_(i=1)^n▒〖P(X_i |Pai(X_i 〗))
+
+5. Aprendizado Bayesiano
+	Em IA, o aprendizado de máquina é fundamental para que o agente inteligente possa tomar decisões racionais que aumentam as chances de sucesso em suas ações. Podemos dividir o aprendizado em:
+- Aprendizado não supervisionado: onde os dados obtidos são analisados para ver se há semelhança e é possível agrupá-los;
+- Aprendizado supervisionado: o conhecimento obtido no passado, é utilizado para “prever” o que pode ocorrer no futuro. Aqui se encaixa o aprendizado bayesiano.
+	Dentro do aprendizado Bayesiano, podemos dividir em:
+- Aprendizado por parâmetro: possuímos a estrutura, mas não a tabela de probabilidades condicionais (TPC).
+- Aprendizado estrutural: não se tem a estrutura, então é necessário definir as arestas que serão ligadas a cada vértice. 
+	Em uma rede bayesiana, um dos maiores problemas, é justamente a probabilidade, não é uma tarefa fácil obter os valores de cada uma das variáveis. O que é feito nestes casos é o uso de estimadores, mesmo assim este processo tem um grande custo computacional. Muitas vezes, para facilitar o aprendizado é utilizada a fórmula de naive Bayes (3.2) que considera as variáveis independentes reduzindo e facilitando os cálculos. 
+	Durante o aprendizado bayesiano, ocorre dos valores de cada probabilidade aumentar ou diminuir, pois conforme novas informações são recebidas, a “rede” pode melhorar suas probabilidades para aumentar o sucesso nas decisões. 
+ 
+6. Exemplos de Aplicações
+	Três exemplos de aplicações de redes Bayesianas serão apresentados abaixo para facilitar. O primeiro se trata de um Filtro de Spam Bayesiano; o segundo é sobre Interfaces Adaptativas, mostrando como redes Bayesianas podem ser usadas em sites para criar páginas quase personalizadas para cada usuário; e por fim, baseado em no exemplo de troubleshooting automotivo, foi criado um exemplo simples para troubleshooting a um computador que não liga.
+	6.1. Filtro de Spam Bayesiano [2]
+	Método estatístico para separar e-mail s spams  dos comuns. Esta ferramenta utiliza o  teorema de Bayes da seguinte forma:
+	P(spam│palavra)= (P(palavra│spam)P(spam))/(P(palavra))
+	O primeiro passo a ser feito é “ensinar” o que é e o que não é spam. Sabemos que em geral spams contém palavras como “Remédios sem prescrição” ou “Ganhe dinheiro fácil”. Partindo deste ponto, e-mails considerados spams terão palavras contabilizadas e associada a  uma probabilidade, que será mais alta quanto mais comum for em spams.
+Ex.: “Está precisando de Remédios sem prescrição? Contate-nos o quanto antes e podemos te ajudar! Sem burocracia e com baixos preços.”
+SPAM: 	1.0000
+Está		0.0032
+precisando	0.0010
+burocracia	0.0111
+remédios	0.8837
+“João, entre em contato rápido para resolvermos o problema do nosso trabalho de IA. Abraço”
+SPAM: 	0.0002
+João		0.0053
+abraço		0.0078
+trabalho	0.0759
+IA		0.0021
+Neste exemplo, o filtro de spam seleciona as palavras mais relevantes para a verificação de spam, alguns modelos mais sofisticados atribuem também uma probabilidade ao IP do remetente e a detalhes do HTML do e-mail.
+
+	6.2. Interface Adaptativa [3] / Publicidade direcionada [4]
+	A Interface Adaptativa visa apresentar ao usuário web uma página que se aproxime ao máximo com o seu perfil, por exemplo: suponha que um usuário tenha como foco principal notícias sobre esportes e de forma mais específica tenha o futebol como principal interesse. Com essas informações, obtidas a partir do perfil do usuário, é possível destacar na página principal notícias que tenham maior relevância e facilitar a navegação, ajudando tanto o leitor quanto o site que pode direcionar melhor as propagandas e obter maior pageview.
+
+
+	6.3. Troubleshooting
+	Exemplo baseado no troubleshooting automotivo [5], mas direcionado para computadores. A ideia é mostrar a relação entre alguns defeitos mostrados que os computadores apresentam, dado que um computador não está ligando. 
+
+
+Tabelas de probabilidades condicionais:
+Monitor desligado	Ligado na tomada
+Não	0,95	Não	0,05
+Sim	0,05	Sim	0,95
+
+Voltagem Errada
+Ligado na Tomada	Não	Sim
+Não	0,95	0,15
+Sim	0,05	0,85
+
+Luz Piscando
+Voltagem Errada	Não	Sim
+Não	0,50	0,2
+Sim	0,50	0,8
+
+Falha no Teste HD
+Luz Piscando	Não	Sim
+Não	0,35	0,6
+Sim	0,65	0,4
+
+Falha no SO
+Luz Piscando	Não	Sim
+Não	0,95	0,80
+Sim	0,05	0,20
+
+Computador Sem Sinal
+Monitor Desligado	Não	Sim
+Voltagem Errada	Não	Sim	Não	Sim
+Falha do HD	Não	Sim	Não	Sim	Não	Sim	Não	Sim
+Falha no SO	N	S	N	S	N	S	N	S	N	S	N	S	N	S	N	S
+Não	1	0,05	0,80	0,95	1	0,95	0	0	0,1	0,95	0,1	0,05	0,1	0,4	0	0
+Sim	0	0,95	0,20	0,05	0	0,05	1	1	0,9	0,05	0,9	0,95	0,9	0,6	1	1
+
+Da tabela podemos extrair, por exemplo:
+P(Falha HD | ~Luz Piscando) = 
+			=P(Falha HD AND ~Luz piscando)/P(~Luz piscando)
+			=0,35
+P(~MonitorDesligado AND ~VoltagemErrada AND FalhaHD AND ~FalhaSO | ComputadorSemSinal)    =  0,2
+	6.4. Outros exemplos verificados
+	Durante a busca por aplicações úteis de Redes Bayesianas, há casos interessantes como a Seleção de Alvos Militares [6] que a partir de uma série de eventualidades busca atingir o alvo de forma mais efetiva; Contribuição do Erro Humano em Colisões [7], através da análise de diversos fatores humanos, o autor mostra como erros humanos contribuem para as colisões; e Qualidade do Leite [8], através da rede bayesiana, o produtor pode escolher o que será mais vantajoso para obter mais leite, como ração dada e a raça do animal. 
+
+7. Softwares para modelar e resolver Redes Bayesianas
+	Duas ferramentas disponíveis na web foram utilizadas para testar alguns modelos simples de redes bayesianas e estão apresentados abaixo:   
+	7.1. JavaBayes
+	Ferramenta desenvolvida em Java pelo professor Fabio Cozman para modelar e resolver redes bayesianas.
+	7.2. Netica
+	Desenvolvido pela Norsys Software Corp. é um produto pago, mas é possível utilizar uma versão limitada e gratuita.
+
