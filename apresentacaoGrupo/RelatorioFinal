@@ -1,0 +1,86 @@
+MAC0470 - Desenvolvimento de Software Livre – Professor Daniel Macêdo Batista
+
+Grupo: Anderson Reis Nº USP 7578536 - Duilio Henrique Haroldo Elias - Nº USP 6799722 - Maurício Tavares Ozaki - Nº USP 7577427
+
+Relatório Final
+	1. Audacity
+	1.1. Sobre o Software
+	
+	O Audacity é um software gratuito que permite editar e gravar áudios nos principais SOs. Há diversos recursos úteis, com o Audacity podemos: editar arquivos em MP3, Ogg entre outros, é possível captar áudio através de qualquer computador com microfone, além de adicionar diversos efeitos de som o que torna a ferramenta ideal para gravação de podcasts. O software é distribuído sob a licença GNU GPL v2, seus desenvolvedores permitem o uso livre do programa para estudo, melhorá-la ou compartilhá-lo.
+
+	1.2. Motivação
+
+	A principal razão para termos escolhido o Audacity, é que segundo o FLOSS Coach, a linguagem de programação mais usada é o C++, que é uma linguagem mais familiar aos integrantes do grupo. Também levamos em conta a utilidade do software, o Audacity é uma ferramenta interessante em diversos aspectos, entre os principais está a possibilidade de gravar múltiplas faixas, útil para quem tem banda; é possível também converter LP para CD; e também, algo comum hoje em dia, a gravação de podcasts.	
+
+	1.3.  Dependências para instalar/compilar
+
+	Assim como a maioria dos softwares para Linux, há a necessidade de alguns pacotes que são normalmente instalados junto do SO, como GNU Make, GCC e autoconf. Mas, há a necessidade de instalar uma biblioteca chamada wxWidgets, na wiki do Audacity é explicado como fazer a instalação para então compilar o software.
+
+	1.4. Dependências do “Usuário”
+
+	Para com compilar o programa, é necessário conhecimentos básicos de Linux, pois o tutorial do próprio programa é bem claro na hora de ensinar a instalação, mas há a possibilidade de ocorrer problemas como é o caso da dependência da biblioteca wxWidgets.
+	 Quanto ao uso, o Audacity é um software bem intuitivo, porém, podemos classificar o nível de dificuldade como médio, pois os comandos básicos são de fácil aprendizado, por exemplo: abrir uma faixa, cortá-la e juntar pedaços que são comandos úteis para quem gosta de criar ringtones, mas quando desejamos utilizar recursos mais avançados, é necessário ter conhecimentos da entrada e saída de áudio do computador, assim como é importante saber como funciona cada um dos efeitos que estão presentes.
+
+	2. Comunidade Audacity
+	2.1. Onde ficam os Bugs?
+
+	Os bugs ficam no Bugzilla[2], que não é nada mais que um fórum em que cada postagem eles postam informações sobre data, versão usada e passos para ocorrer o bug. Abaixo um exemplo:
+ 
+Figura 1. Bugzilla
+	O fórum é bem atualizado, as postagens são sempre recentes e a participação dos membros para resolver o bugs também é constante. Obviamente, há alguns casos de bugs que ficam esquecidos, muito provavelmente pela baixa prioridade. A prioridade de cada bug é identificado pelas siglas P1 (mais importantes) ao P5(menos importantes).
+	Apesar da wiki ser atualizada e bem explicada, dois integrantes do grupo passaram por dificuldades na hora da instalação, o motivo foi o mesmo, a dependência da biblioteca wxWidget, mesmo realizando a instalação corretamente desta biblioteca, a compilação do Audacity continuava a apresentar erros durante após o comando make para compilar. Não encontramos solução para o erro, sendo assim optamos por utilizar os PCs da rede Linux do IME que instalaram sem problemas.
+
+	2.2. Interação com a Comunidade
+	Inicialmente não ficou claro como participaríamos do Bugzilla pois, não estava claro como se cadastrar, acabamos então encontrando a informação de que o login só poderia ser obtido se enviássemos um e-mail para o gale@audacityteam.org, o e-mail enviado foi:
+	Hi, I want sign up in bugzilla!
+	Can you help me, please?
+
+
+	PS: I've been studying English but I'm not fluent yet. Sorry for any mistake.
+
+	Thanks!
+
+	O e-mail foi respondido rapidamente:
+	Thanks for your interest, Mauricio.
+
+	A Bugzilla account is not required to report (or search for) bugs.
+	Generally the only people with Bugzilla accounts are experienced C++ developers, or 	experienced Audacity bug watchers who test our nightly builds regularly:
+	http://wiki.audacityteam.org/wiki/Nightly_Builds .
+	For occasional bug reports, the general public should e-mail reports (only for the 	current Audacity 2.0.x Release or Nightly Build) to feedback@audacityteam.org after 	reading:
+	http://wiki.audacityteam.org/wiki/Reporting_Bugs .
+	Alternatively, please let me know what is the bug, the operating system and the three-	section version number of Audacity.
+	If you are a developer, please subscribe to audacity-devel here:
+	https://lists.sourceforge.net/lists/listinfo/audacity-devel
+	and make a post introducing yourself and giving your background. Let us know what 	bugs 	specifically you are interested in and a general idea how you would fix them. If 	you are 	ready 	to submit a patch, please prefix your -devel post containing 	your patch with [PATCH] 	<bug 	number>. Please see this page for details:
+	http://wiki.audacityteam.org/wiki/SubmittingPatches .
+	We can see about a bugzilla account for you when the developers have committed 	some 	substantial patches contributed by yourself.
+	There are many ways you can contribute to Audacity. Please see:
+	http://wiki.audacityteam.org/wiki/Contribute .	
+ 
+	Por essa resposta, nós entendemos que o Gale não nos deu o login pois pensou que éramos usuários e que simplesmente reportaríamos um erro, sendo assim encaminhos um segundo e-mail:
+	Hi again Gale! Thanks for your attention!
+	I am studying Computer Science at IME-USP in Brazil, and we have a this optional 	discipline:
+	https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=MAC0470
+	I'm know you probably don't speak Portuguese, but we call this discipline as Free 	Software Development, we learn about open source software. 
+	We are a group of three and our teacher give us some subjects like Firefox, VIM and 	Audacity (or choose) and we have to find some bug and try fix it.  So, this is the reason 	why I ask you to sign up. We don't need an account for three, only one is enough! 	If you can't give us an account, is it possible a list of easy bugs? Because we have only 	until December to do this.
+	Thanks for you help!
+	
+	O Gale respondeu rapidamente:
+
+	You can view bugs on Audacity Bugzilla without having an account on it.
+	As I suggested, sign up to audacity-devel and let them know about some bugs you 	would like to fix and give them a rough idea how you would fix them. For example they 	may ask you to fix two of the four bugs you mention.
+	If you already have a patch, you can attach it to your message to audacity-devel as I 	indicated.
+
+	Diante das respostas obtidas, nós decidimos fazer a sugestão passada nos cadastramos no Audacity-devel, que é uma lista de e-mail, no estilo Google groups, acreditamos que para evitar sobrecarregar a caixa de mensagem dos usuários, eles mandam apenas um “pacote” de e-mails por dia, isto é, todos os dias recebemos um e-mail com o assunto audacity-devel Digest, Vol 109, Issue X (X muda todo o dia), nestes e-mail há uma compilação de todas as conversas que foram trocadas nas últimas 24 horas.
+	Desde que efetuamos o cadastro, não chegamos mais a interagir com o grupo, porque para a resolução do bug só dependia de nosso próprio conhecimento.
+	O que ficou entendido para nós, é que a comunidade do Audacity é bem fechada, eles já possuem os desenvolvedores necessários para manter o programa e cuidar dos bugs, qualquer ajuda é bem-vinda, mas para evitar “bagunça” o acesso “real” só é dado para quem realmente pode se dedicar. Acreditamos que isso é devido ao que foi discutido em aula, eles querem evitar que pessoas como nós, por exemplo, entrem na comunidade, contribua por um semestre e depois fique como um fantasma sem colaborar. Nós não deixamos de concordar com a política de desenvolvimento deles.
+
+	3. Seleção do Bug
+
+	4. Conclusões
+
+	5. Referências
+	[1] http://web.audacityteam.org/community/ 
+	[2] http://bugzilla.audacityteam.org/ 
+	[] https://github.com/audacity/audacity
+	[3] http://www.makeuseof.com/tag/10-creative-audacity-havent-thought/ 
